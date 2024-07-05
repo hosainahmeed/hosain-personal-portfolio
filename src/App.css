@@ -1,0 +1,21 @@
+body[theme='light'] {
+    background-color: #EDE8E4;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+body[theme='light'] .word {
+    color: #212121;
+}
+
+body[theme='dark'] {
+    background-color: #212121;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+body[theme='dark'] {
+    color: #fff;
+  }
+
+body[theme='color3'] {
+    background-color: lightgreen;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
