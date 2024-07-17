@@ -47,7 +47,8 @@ function SkillsSection() {
   }, []);
 
   return (
-    <div className="pDive py-10 md:py-20 lg:py-28 text-center">
+    <div className="pDive py-4 md:py-20 lg:py-28 text-center">
+      
       <h1 className="text-3xl mb-5 md:text-[6vw] font-bold text-center md:text-center md:mb-24">
         What I Know??
       </h1>
@@ -63,7 +64,6 @@ function SkillsSection() {
         "Bootstrap",
         "Tailwind CSS",
         "MUI",
-        "Continuous Learning",
       ].map((text, index) => (
         <p
           key={index}

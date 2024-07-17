@@ -1,48 +1,26 @@
-import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
-import { pageColorTrans } from "./utils";
-import Navbars from "./component/Navbars";
-import Herosection from "./Herosection";
+import { useState, useEffect } from "react";
+import Loader from "./Loader";
+import SectionResurve from "./SectionResurve";
 import "./App.css";
-import SkillsSection from "./SkillsSection";
-import AboutSection from "./AboutSection";
-import ContactSection from "./ContactSection";
 
 function App() {
+  const [showLoader, setShowLoader] = useState(true);
+
   useEffect(() => {
-    pageColorTrans();
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 2000);
 
-    const lenis = new Lenis({
-      smooth: true,
-      lerp: 0.1,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
+    return () => clearTimeout(timer); 
   }, []);
 
   return (
-    <div className="w-[90%] mx-auto main">
-      <Navbars />
-      <div className="page" data-color="light" id="hero">
-        <Herosection />
+    <div className="relative">
+      <div className={`loader-container ${showLoader ? "fade-in" : "fade-out"}`}>
+        <Loader />
       </div>
-      <div className="page" data-color="dark" id="about">
-        <AboutSection />
-      </div>
-      <div className="page" data-color="dark">
-        <SkillsSection />
-      </div>
-      <div className="page" data-color="dark" id="contact">
-        <ContactSection />
+      <div className={`section-container ${showLoader ? "fade-out" : "fade-in"}`}>
+        <SectionResurve />
       </div>
     </div>
   );
