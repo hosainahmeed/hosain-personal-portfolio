@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -36,20 +36,31 @@ function Loader() {
     herotextElements.forEach(heroTextDestroy);
   }, []);
 
+  const [count, setCount] = useState(0);
 
-  useEffect(()=>{
-    for (let index = 0; index <= 100; index++) {
-      const element = index;
-      console.log(element);
-    }
-  })
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prevCount) => {
+        if (prevCount < 100) {
+          return prevCount + 1;
+        } else {
+          clearInterval(interval);
+          return prevCount;
+        }
+      });
+    }, 15);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="w-full h-screen flex items-center justify-center">
-       <div>
-        <h1 className="introtext text-[14vw] md:text-[8vw] leading-none font-sans uppercase text-[#393737] font-bold">Hosain Ahmed</h1>
-       </div>
+      <div className="text-center">
+        <h1 className="introtext word text-[14vw] md:text-[8vw] leading-none font-sans uppercase text-[#393737] font-bold">Hosain Ali</h1>
+        <h1>Ready _{count}</h1>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Loader
+export default Loader;

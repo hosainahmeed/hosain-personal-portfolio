@@ -32,7 +32,6 @@ function Herosection() {
         ease: "power2.out",
         stagger: 0.1,
         color: "#393737",
-        delay:2,
       });
     }
 

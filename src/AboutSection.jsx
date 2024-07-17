@@ -25,6 +25,7 @@ function AboutSection() {
           start: `top center`,
           end: `bottom center`,
           scrub: 0.5,
+
         },
         stagger: 0.2,
         color: `#fff`,

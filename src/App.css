@@ -26,21 +26,3 @@ body[theme='color3'] {
   -webkit-text-stroke: 1px #fff;
 }
 
-
-
-
-
-/* Custom CSS for smooth transitions */
-.fade-in {
-    @apply opacity-100 transition-opacity duration-1000 ease-in-out;
-  }
-  
-  .fade-out {
-    @apply opacity-0 transition-opacity duration-1000 ease-in-out;
-  }
-  
-  .loader-container,
-  .section-container {
-    @apply absolute w-full h-full;
-  }
-  

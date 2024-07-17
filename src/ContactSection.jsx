@@ -53,7 +53,9 @@ function ContactSection() {
   return (
     <div className="flex flex-col items-start md:items-center justify-center pb-[10vw] px-4 md:px-0 md:max-w-[1140px] md:mx-auto">
       <div className="mb-12 text-center">
-        <h2 className="text-[12vw] mb-2 md:text-[8vw] md:mb-16 font-bold text-transparent contact">Let's talk</h2>
+        <h2 className="text-[12vw] mb-2 md:text-[8vw] md:mb-16 font-bold text-transparent contact">
+          Let's talk
+        </h2>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center w-full">
         <div className="w-full max-w-lg rounded">
@@ -126,7 +128,7 @@ function ContactSection() {
           </form>
         </div>
         <div className="p-4 h-full w-full mx-auto mt-16 md:w-auto md:mt-0 flex flex-col gap-12">
-          <div className="flex items-center justify-start gap-12">
+          <div className="flex items-center justify-start gap-12 cursor-pointer hover:scale-125 transition-all hover:text-[#ffa337]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
@@ -150,7 +152,7 @@ function ContactSection() {
             </svg>
             <span>Instagram</span>
           </div>
-          <div className="flex items-center justify-start gap-12">
+          <div className="flex items-center justify-start gap-12 cursor-pointer hover:scale-125 transition-all hover:text-[#ffa337]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
@@ -174,8 +176,8 @@ function ContactSection() {
             </svg>
             <span>Twitter</span>
           </div>
-          <div className="flex items-center justify-start gap-12">
-            <svg 
+          <div className="flex items-center justify-start gap-12 cursor-pointer hover:scale-125 transition-all hover:text-[#ffa337]">
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
               focusable="false"
@@ -187,14 +189,18 @@ function ContactSection() {
                 fill: "var(--token-6b60c4fa-a3b2-4ea3-8e1a-4202c7b68ede, rgba(255, 255, 255, 0.5))",
                 color:
                   "var(--token-6b60c4fa-a3b2-4ea3-8e1a-4202c7b68ede, rgba(255, 255, 255, 0.5))",
-                flexShrink: 0,
-                border: "1px solid #fff",
-                padding: "15px",
-                
+                  flexShrink: 0,
+                  border: "1px solid #fff",
+                  padding: "15px",
               }}
             >
-              <g fill="rgba(255, 255, 255, 0.5)">
-                <path d="M128,82a46,46,0,1,0,46,46A46.06,46.06,0,0,0,128,82Zm0,80a34,34,0,1,1,34-34A34,34,0,0,1,128,162ZM176,26H80A54.06,54.06,0,0,0,26,80v96a54.06,54.06,0,0,0,54,54h96a54.06,54.06,0,0,0,54-54V80A54.06,54.06,0,0,0,176,26Zm42,150a42,42,0,0,1-42,42H80a42,42,0,0,1-42-42V80A42,42,0,0,1,80,38h96a42,42,0,0,1,42,42ZM190,76a10,10,0,1,1-10-10A10,10,0,0,1,190,76Z"></path>
+              <g
+                style={{
+                  color:
+                    "var(--token-6b60c4fa-a3b2-4ea3-8e1a-4202c7b68ede, rgba(255, 255, 255, 0.5))",
+                }}
+              >
+                <path d="M216,26H40A14,14,0,0,0,26,40V216a14,14,0,0,0,14,14H216a14,14,0,0,0,14-14V40A14,14,0,0,0,216,26Zm2,190a2,2,0,0,1-2,2H40a2,2,0,0,1-2-2V40a2,2,0,0,1,2-2H216a2,2,0,0,1,2,2ZM94,112v64a6,6,0,0,1-12,0V112a6,6,0,0,1,12,0Zm88,28v36a6,6,0,0,1-12,0V140a22,22,0,0,0-44,0v36a6,6,0,0,1-12,0V112a6,6,0,0,1,12,0v2.11A34,34,0,0,1,182,140ZM98,84A10,10,0,1,1,88,74,10,10,0,0,1,98,84Z"></path>
               </g>
             </svg>
             <span>Instagram</span>

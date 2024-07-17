@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowLoader(false);
+      setShowLoader(false); 
     }, 2000);
 
     return () => clearTimeout(timer); 
@@ -16,12 +16,12 @@ function App() {
 
   return (
     <div className="relative">
-      <div className={`loader-container ${showLoader ? "fade-in" : "fade-out"}`}>
+     {showLoader ?  <div className={`loader-container`}>
         <Loader />
-      </div>
-      <div className={`section-container ${showLoader ? "fade-out" : "fade-in"}`}>
+      </div> : <div className={`section-container`}>
         <SectionResurve />
-      </div>
+      </div>}
+     
     </div>
   );
 }
