@@ -54,22 +54,23 @@ function Navbars() {
             About_Me
           </h6>
           <h6
+            onClick={handleClose("skill")}
+            className="cursor-pointer font-mono transition-all hover:scale-125"
+          >
+            Skills
+          </h6>
+          <h6
             onClick={handleClose("projects")}
             className="cursor-pointer font-mono transition-all hover:scale-125"
           >
             Projects
           </h6>
+        
           <h6
             onClick={handleClose("contact")}
             className="cursor-pointer font-mono transition-all hover:scale-125"
           >
             Contact
-          </h6>
-          <h6
-            onClick={handleClose("skill")}
-            className="cursor-pointer font-mono transition-all hover:scale-125"
-          >
-            Skills
           </h6>
         </div>
       </div>
@@ -101,9 +102,9 @@ function Navbars() {
           TransitionComponent={Fade}
         >
           <MenuItem onClick={handleClose("about")}>About</MenuItem>
+          <MenuItem onClick={handleClose("skill")}>Skills</MenuItem>
           <MenuItem onClick={handleClose("projects")}>Projects</MenuItem>
           <MenuItem onClick={handleClose("contact")}>Contact</MenuItem>
-          <MenuItem onClick={handleClose("skill")}>Skills</MenuItem>
         </Menu>
       </div>
     </div>

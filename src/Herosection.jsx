@@ -53,7 +53,7 @@ function Herosection() {
         <p className="text-[#393737] text-xl">{time.toLocaleTimeString()}</p>
         <div className="text-center font-bold  md:py-28">
           <h1 className="herotext text-[14vw] md:text-[8vw] leading-none font-sans uppercase text-[#393737]">
-            creative <br /> web developer
+            creative web developer
           </h1>
           <p className="herotext text-sm md:text-2xl font-mono mt-4 md:mt-10 opacity-[60%]">
             Crafting a website as a frontend web developer and designer...
