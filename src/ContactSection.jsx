@@ -51,7 +51,7 @@ function ContactSection() {
   };
 
   return (
-    <div className="flex flex-col items-start md:items-center justify-center pb-[10vw] px-4 md:px-0 md:max-w-[1140px] md:mx-auto">
+    <div className="flex flex-col mt-[8vw] items-start md:items-center justify-center pb-[10vw] px-4 md:px-0 md:max-w-[1140px] md:mx-auto">
       <div className="mb-12 text-center">
         <h2 className="text-[12vw] mb-2 md:text-[8vw] md:mb-16 font-bold text-transparent contact">
           Let's talk
@@ -110,7 +110,6 @@ function ContactSection() {
                 })}
                 className="w-full bg-[#1A1A1A] text-sm font-extralight px-4 py-2 border border-gray-600 rounded outline-none text-gray-200"
                 placeholder="Message"
-                style={{ resize: "none" }}
               ></textarea>
               {errors.message && (
                 <span className="text-red-500 text-sm">
@@ -189,9 +188,9 @@ function ContactSection() {
                 fill: "var(--token-6b60c4fa-a3b2-4ea3-8e1a-4202c7b68ede, rgba(255, 255, 255, 0.5))",
                 color:
                   "var(--token-6b60c4fa-a3b2-4ea3-8e1a-4202c7b68ede, rgba(255, 255, 255, 0.5))",
-                  flexShrink: 0,
-                  border: "1px solid #fff",
-                  padding: "15px",
+                flexShrink: 0,
+                border: "1px solid #fff",
+                padding: "15px",
               }}
             >
               <g

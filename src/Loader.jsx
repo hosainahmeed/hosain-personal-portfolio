@@ -57,7 +57,7 @@ function Loader() {
     <div className="w-full h-screen flex items-center justify-center">
       <div className="text-center">
         <h1 className="introtext word text-[14vw] md:text-[8vw] leading-none font-sans uppercase text-[#393737] font-bold">Hosain Ali</h1>
-        <h1>Ready _{count}</h1>
+        <h1>Ready _{count}%</h1>
       </div>
     </div>
   );

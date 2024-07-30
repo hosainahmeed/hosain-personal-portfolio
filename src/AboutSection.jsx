@@ -22,8 +22,8 @@ function AboutSection() {
       gsap.to(".wonerPersonal span", {
         scrollTrigger: {
           trigger: `.container`,
-          start: `top center`,
-          end: `bottom center`,
+          start: `-15% 40%`,
+          end: `+=500`,
           scrub: 0.5,
 
         },

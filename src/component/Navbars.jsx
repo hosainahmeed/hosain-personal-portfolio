@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -9,7 +9,11 @@ function Navbars() {
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    if (anchorEl) {
+      setAnchorEl(null);
+    } else {
+      setAnchorEl(event.currentTarget);
+    }
   };
 
   const handleClose = (sectionId) => () => {
@@ -19,6 +23,19 @@ function Navbars() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (anchorEl && anchorEl.contains && !anchorEl.contains(event.target)) {
+        setAnchorEl(null);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [anchorEl]);
 
   return (
     <div className="mt-8 flex justify-between items-center md:flex md:items-start md:justify-between md:mt-12">
@@ -47,6 +64,12 @@ function Navbars() {
             className="cursor-pointer font-mono transition-all hover:scale-125"
           >
             Contact
+          </h6>
+          <h6
+            onClick={handleClose("skill")}
+            className="cursor-pointer font-mono transition-all hover:scale-125"
+          >
+            Skills
           </h6>
         </div>
       </div>
@@ -80,6 +103,7 @@ function Navbars() {
           <MenuItem onClick={handleClose("about")}>About</MenuItem>
           <MenuItem onClick={handleClose("projects")}>Projects</MenuItem>
           <MenuItem onClick={handleClose("contact")}>Contact</MenuItem>
+          <MenuItem onClick={handleClose("skill")}>Skills</MenuItem>
         </Menu>
       </div>
     </div>

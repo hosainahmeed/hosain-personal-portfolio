@@ -39,7 +39,7 @@ function SectionResurve() {
           <div className="page" data-color="dark" id="about">
             <AboutSection />
           </div>
-          <div className="page" data-color="dark">
+          <div className="page" data-color="dark" id="skill">
             <SkillsSection />
           </div>
           <div className="page" data-color="dark" id="projects">
