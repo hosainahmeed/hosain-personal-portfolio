@@ -65,6 +65,12 @@ function Navbars() {
           >
             Projects
           </h6>
+          <h6
+            onClick={handleClose("services")}
+            className="cursor-pointer font-mono transition-all hover:scale-125"
+          >
+            Services
+          </h6>
         
           <h6
             onClick={handleClose("contact")}
@@ -104,6 +110,7 @@ function Navbars() {
           <MenuItem onClick={handleClose("about")}>About</MenuItem>
           <MenuItem onClick={handleClose("skill")}>Skills</MenuItem>
           <MenuItem onClick={handleClose("projects")}>Projects</MenuItem>
+          <MenuItem onClick={handleClose("services")}>Services</MenuItem>
           <MenuItem onClick={handleClose("contact")}>Contact</MenuItem>
         </Menu>
       </div>

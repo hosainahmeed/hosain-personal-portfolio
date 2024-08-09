@@ -7,6 +7,7 @@ import "./App.css";
 import SkillsSection from "./SkillsSection";
 import AboutSection from "./AboutSection";
 import ContactSection from "./ContactSection";
+import ServicesSection from "./ServicesSection";
 import ProjectsSection from "./ProjectsSection";
 function SectionResurve() {
   let mainSection =useRef()
@@ -44,6 +45,9 @@ function SectionResurve() {
           </div>
           <div className="page" data-color="dark" id="projects">
             <ProjectsSection />
+          </div>
+          <div className="page" data-color="dark" id="services">
+            <ServicesSection />
           </div>
           <div className="page" data-color="dark" id="contact">
             <ContactSection />

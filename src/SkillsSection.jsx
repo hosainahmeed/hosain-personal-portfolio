@@ -16,7 +16,6 @@ function SkillsSection() {
       "HTML/CSS",
       "JavaScript (ES6+)",
       "React",
-      "Responsive Design",
       "Version Control/Git",
       "Performance Optimization",
       "UI/UX Design Basics",
@@ -118,8 +117,6 @@ function SkillsSection() {
         return "//i.ibb.co/Tq6C7S9/javascript-logo.png"
       case "React":
         return "path/to/react.png";
-      case "Responsive Design":
-        return "path/to/responsive-design.png";
       case "Version Control/Git":
         return "path/to/git.png";
       case "Performance Optimization":
