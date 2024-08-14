@@ -1,16 +1,25 @@
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 import { pageColorTrans } from "./utils";
-import Navbars from "./component/Navbars";
-import Herosection from "./Herosection";
+import Navbars from "../src/component/Header/Navbar/Navbars.jsx";
+import Herosection from "../src/component/Header/Herosection.jsx";
 import "./App.css";
-import SkillsSection from "./SkillsSection";
-import AboutSection from "./AboutSection";
-import ContactSection from "./ContactSection";
-import ServicesSection from "./ServicesSection";
-import ProjectsSection from "./ProjectsSection";
+import SkillsSection from "../src/component/Content/SkillsSection.jsx";
+import AboutSection from "../src/component/Header/AboutSection.jsx";
+import ContactSection from "../src/component/Content/ContactSection.jsx";
+import ServicesSection from "../src/component/Content/ServicesSection.jsx";
+import ProjectsSection from "../src/component/SwiperPojects/ProjectsSection.jsx";
+import { gsap } from "gsap";
+// import ProjectsManagement from "./ProjectsManagement";
+
 function SectionResurve() {
   let mainSection =useRef()
+  useEffect(()=>{
+    gsap.to(mainSection.current,{
+      opacity:1,
+      duration:2
+    })
+  },[])
     useEffect(() => {
         pageColorTrans();
     
@@ -32,7 +41,7 @@ function SectionResurve() {
       }, []);
     
       return (
-        <div ref={mainSection} className="w-[90%] mx-auto main">
+        <div ref={mainSection} className="w-[90%] mx-auto main opacity-0">
           <Navbars />
           <div className="page" data-color="light" id="hero">
             <Herosection />
@@ -46,6 +55,9 @@ function SectionResurve() {
           <div className="page" data-color="dark" id="projects">
             <ProjectsSection />
           </div>
+          {/* <div className="page" data-color="dark" id="projects">
+            <ProjectsManagement/>
+          </div> */}
           <div className="page" data-color="dark" id="services">
             <ServicesSection />
           </div>

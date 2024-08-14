@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import wonerImg from "./assets/file.jpg";
+import wonerImg from "../../assets/file.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);

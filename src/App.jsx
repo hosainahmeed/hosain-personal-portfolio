@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Loader from "./Loader";
-import SectionResurve from "./SectionResurve";
+import Loader from "./Loader.jsx";
+import SectionResurve from "./SectionResurve.jsx";
 import "./App.css";
 
 function App() {

@@ -167,7 +167,7 @@ function SkillsSection() {
 
   return (
     <div className="skills-section py-4 md:py-20 lg:py-28 text-center">
-      <h1 className="text-3xl text-left mb-5 md:text-[6vw] font-bold  md:mb-24">
+      <h1 className="text-3xl text-left mb-5 md:text-[4vw] font-bold  md:mb-28">
         What I Know??
       </h1>
 
